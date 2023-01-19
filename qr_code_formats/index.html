@@ -62,6 +62,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#manual-qr-format">MANUAL QR Format</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#auto-qr-format">AUTO QR Format</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#information-text-file-format">Information text file format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#qr-generation-text-file-format">QR Generation text file format</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -90,11 +96,61 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="qr-code-formats">QR Code Formats</h1>
-<p>This section provides crop analysis with QR Code.</p>
+<p>Since Valent makes use of two kinds of QR codes. The generation of the same requires text files that will be in a specific format. These text files will contain the information required for processing the crop related images.</p>
 <h2 id="manual-qr-format">MANUAL QR Format</h2>
-<p>Manual QR formats</p>
+<p>The text file used to generate QR codes for manual processing must be in the following format.</p>
+<pre><code>info_&lt;Name of attribute&gt;:&lt;Value of attribute&gt;|info_&lt;Name of next attribute&gt;:&lt;Value of next attribute&gt;
+</code></pre>
+<p>This QR is meant to hold additional information besides what is defined by the user. Each additional information attribute must be preceded by the string <strong>info_</strong>. Multiple additional information attributes can be added. Each attribute must be separated by a pipe (<strong>|</strong>) symbol.</p>
+<p>e.g with data.</p>
+<pre><code>info_Study Name:ACC Salts Cowpea 031721|info_Photo Id:cowpea_image_1
+</code></pre>
 <h2 id="auto-qr-format">AUTO QR Format</h2>
-<p>Auto QR formats</p>
+<p>Unlike the QR used for manual processing, the QR for automatic processing is more elaborate as it holds all the necessary information required to process an image without user intervention. </p>
+<p>Generation of this QR has 3 pre-requisites:</p>
+<ol>
+<li>An information text file with data in a specific format containing the parameters and additional information required for processing.</li>
+<li>The location of the above mentioned text file in the remote system in which it is stored.</li>
+<li>The location of the PDF/RGB file that maintains RGB data of the crop image.</li>
+</ol>
+<h3 id="information-text-file-format">Information text file format</h3>
+<p>The file format of the information text file must be as follows:</p>
+<pre><code>app_crop:&lt;Name of crop being processed&gt; | app_analysis:&lt;Type of analysis being run on the crop image&gt; | app_rows:&lt;Number of rows in the image, the crop is spread out to&gt; | app_cols:&lt;Number of columns in the image, the crop is spread out to&gt; | app_interim_results:&lt;Options YES or NO to highlight whether the detailed images must be generated&gt;|app_specimen_count:&lt;Number of specifimens of the crop in the image being processed&gt;|info_&lt;Name of attribute&gt;:&lt;Value of attribute&gt;|info_&lt;Name of next attribute&gt;:&lt;Value of next attribute&gt;
+</code></pre>
+<p>The file contains two sets of data:</p>
+<ol>
+<li>
+<p><strong>Parameters</strong> - These parameters are what are entered by the user using the User Interface when running the image processing manually. These parameters are fixed and identifiable by the prefix <em>app_</em>. A value is mandatory for each parameter to ensure that processing runs smoothly. The parameters are as follows:</p>
+<ul>
+<li><strong>app_crop</strong>: Name of crop being processed.</li>
+<li><strong>app_analysis</strong>: Type of analysis being run on the crop image.</li>
+<li><strong>app_rows</strong>: Number of rows in the image, the crop is spread out to.</li>
+<li><strong>app_cols</strong>: Number of columns in the image, the crop is spread out to.</li>
+<li><strong>app_interim_results</strong>: Indicator that signals whether detailed images must be generated at each stage of the process. The parameter accepts only one of two values namely  YES or NO.</li>
+<li><strong>app_specimen_count</strong>: Number of specimens of the crop in the image being processed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional information</strong> - This is additional information that needs to be associated to image processing of the crop. These additional attributes are identifiable by the prefix <em>info_</em>. These attributes must have a name and a value associated to it.</p>
+</li>
+</ol>
+<p>The additional information attributes must follow the parameters. All the parameters and attributes must be separated by the pipe (<strong>|</strong>) symbol.</p>
+<p>e.g with data. </p>
+<pre><code>app_crop:COWPEA|app_analysis:ANALYZE_PHYTO_DAMAGE|app_rows:3|app_cols:2|app_interim_results:YES| app_specimen_count:5|info_Study Name:ACC Salts Cowpea 031721|info_Photo Id:cowpea_image_1
+</code></pre>
+<h3 id="qr-generation-text-file-format">QR Generation text file format</h3>
+<p>Once the pre-requisites are available, the text file to generate a QR must be created using the following format:</p>
+<pre><code>rgb:&lt;Location of the PDF/RGB file in the remote server&gt;|details:&lt;Location of the Information text file&gt;
+</code></pre>
+<p>The file contains two parameters:</p>
+<ol>
+<li><strong>rgb</strong>: This is the link to the location in the remote server where the PDF/RGB file related to the crop being analyzed is maintained.</li>
+<li><strong>details</strong>: This is the link to the location in the remote server where the information text file is maintained.</li>
+</ol>
+<p>Both parameters must be separated by the pipe (<strong>|</strong>) symbol.</p>
+<p>e.g with data.</p>
+<pre><code>rgb:/auto_qr/cowpea/cowpea_rgb.txt|details:/cowpea/cowpea_image_1_details.txt
+</code></pre>
               
             </div>
           </div><footer>
