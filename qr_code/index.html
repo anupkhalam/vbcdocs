@@ -55,9 +55,45 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">Crop Analysis using QR Code</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#manual-qr-mode">MANUAL QR mode</a>
+    <li class="toctree-l2"><a class="reference internal" href="#manual-mode">Manual mode</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#apple">Apple</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#auto-qr-mode">AUTO QR mode</a>
+    <li class="toctree-l3"><a class="reference internal" href="#banana">Banana</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cowpea">Cowpea</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cucumber">Cucumber</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rice">Rice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tomato">Tomato</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wheat">Wheat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plate-inhibition">Plate Inhibition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#qr-code-mode">QR Code mode</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#apple_1">Apple</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#banana_1">Banana</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cowpea_1">Cowpea</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cucumber_1">Cucumber</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rice_1">Rice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tomato_1">Tomato</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wheat_1">Wheat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plate-inhibition_1">Plate Inhibition</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -89,12 +125,178 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="images-with-qr-code">Images with QR code</h1>
-<p>This section provides crop analysis with QR Code.</p>
-<h2 id="manual-qr-mode">MANUAL QR mode</h2>
-<p>Manual QR Instruction</p>
-<h2 id="auto-qr-mode">AUTO QR mode</h2>
-<p>Auto QR Instruction</p>
+                <h1 id="qr-image-analysis-manual-and-qr-modes">QR Image Analysis: Manual and QR modes</h1>
+<p>The analysis application has the ability to read QR codes embedded within images. This allows the user to:</p>
+<ol>
+<li>Add additional information associated to the analysis within the QR code.</li>
+<li>Automate the image analysis with minimal human intervention.</li>
+</ol>
+<p>The following sections cover how the above can be achieved.</p>
+<h2 id="manual-mode">Manual mode</h2>
+<h3 id="apple">Apple</h3>
+<p><strong>Steps for Manual analysis using QR code</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>MANUAL</em>.</li>
+<li>Next the crop type option must be set to <em>APPLE</em> .</li>
+<li>The analysis option must be set to <em>ANALYZE RED AREA</em> .</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains additional information related to the analysis must be selected. This will ensure that the additional data will be available as part of the report.</p>
+</li>
+<li>
+<p>Based on the arrangement of the fruit specimens in the image, the user must set the number of rows and columns in the image in the <em>ROWS</em> and <em>COLUMNS</em> field.</p>
+</li>
+<li>The <em>SPECIMEN  COUNT</em> field must be set to a value that reflects the number of specimens in the supplied image that must be analyzed.</li>
+<li>The user must next select an RGB/PDF file that contains values to train the model.</li>
+<li>If the user requires detailed images of every step of the analysis, the user must set the <em>GET DETAILED RESULTS</em> option to <em>YES</em>, otherwise it must be set to <em>NO</em>.</li>
+<li>Once all the options have been set and reviewed, the user must click the <em>PROCESS</em> button once.</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser in the user's system.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the images and data therein.</li>
+<li>If another analysis needs to be run, the button <em>REFRESH</em> can be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<h3 id="banana">Banana</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="cowpea">Cowpea</h3>
+<p><strong>Steps for Manual analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>MANUAL</em>.</li>
+<li>Next the crop type option must be set to <em>COWPEA</em> .</li>
+<li>The analysis option must be set to <em>ANALYZE PHYTO DAMAGE</em> .</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains additional information related to the analysis must be selected. This will ensure that the additional data will be available as part of the report.</p>
+</li>
+<li>
+<p>Based on the arrangement of the leaves in the image, the user must set the number of rows and columns in the image in the <em>ROWS</em> and <em>COLUMNS</em> field.</p>
+</li>
+<li>The <em>SPECIMEN  COUNT</em> field must be a set to a value that reflects the number of specimens in the supplied image must be analyzed.</li>
+<li>The user must next select an RGB/PDF file that contains values to train the model.</li>
+<li>If the user requires detailed images of every step of the analysis, the user must set the <em>GET DETAILED RESULTS</em> option to <em>YES</em>, otherwise it must be set to <em>NO</em>.</li>
+<li>Once all the options have been set and reviewed, the user must click the <em>PROCESS</em> button once. The indicator that the button has been pressed will be indicate by the color of the button changing to green.</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the image and data therein.</li>
+<li>If another analysis needs to be run, the button <em>REFRESH</em> can be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<h3 id="cucumber">Cucumber</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="rice">Rice</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="tomato">Tomato</h3>
+<p><strong>Steps for Manual analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>MANUAL</em>.</li>
+<li>Next the crop type option must be set to <em>TOMATO</em> .</li>
+<li>The analysis option must be set to <em>ANALYZE RED AREA</em> .</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains additional information related to the analysis must be selected. This will ensure that the additional data will be available as part of the report.</p>
+</li>
+<li>
+<p>Based on the arrangement of the fruit samples in the image, the user must set the number of rows and columns in the image in the <em>ROWS</em> and <em>COLUMNS</em> fields.</p>
+</li>
+<li>The <em>SPECIMEN  COUNT</em> field must be set to a value that reflects the number of specimens in the supplied image that must be analyzed.</li>
+<li>The user must next select an RGB/PDF file that contains values to train the model.</li>
+<li>If the user requires detailed images of every step of the analysis, the user must set the <em>GET DETAILED RESULTS</em> option to <em>YES</em>, otherwise it must be set to <em>NO</em>.</li>
+<li>Once all the options have been set and reviewed, the user must click the <em>PROCESS</em> button once.</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser in the user's system.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the images and data therein.</li>
+<li>If another analysis needs to be run, the button <em>REFRESH</em> can be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<h3 id="wheat">Wheat</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="plate-inhibition">Plate Inhibition</h3>
+<p><strong>Steps for Manual analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>MANUAL</em>.</li>
+<li>Next the crop type option must be set to <em>PLATE INHIBITION</em> .</li>
+<li>The analysis option must be set to <em>FUNGI</em> .</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains additional information related to the analysis must be selected. This will ensure that the additional data will be available as part of the report.</p>
+</li>
+<li>
+<p>Based on the arrangement of the plates in the image, the user must set the number of rows and columns in the image in the <em>ROWS</em> and <em>COLUMNS</em> field.</p>
+</li>
+<li>The <em>SPECIMEN  COUNT</em> field must be a set to a value that reflects the number of specimens in the supplied image must be analyzed.</li>
+<li>The user must next select an RGB/PDF file that contains values to train the model.</li>
+<li>If the user requires detailed images of every step of the analysis, the user must set the <em>GET DETAILED RESULTS</em> option to <em>YES</em>, otherwise it must be set to <em>NO</em>.</li>
+<li>Once all the options have been set and reviewed, the user must click the <em>PROCESS</em> button once. The indicator that the button has been pressed will be indicate by the color of the button changing to green.</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the image and data therein.</li>
+<li>If another analysis needs to be run, the button <em>REFRESH</em> can be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<hr />
+<h2 id="qr-code-mode">QR Code mode</h2>
+<h3 id="apple_1">Apple</h3>
+<p><strong>Steps for Automatic analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>QRCODE</em>. This will cause many of the input fields to remain disabled.</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains all the required details related to the analysis must be selected.</p>
+</li>
+<li>
+<p>Once the inputs have been set and reviewed, the user must click the <em>PROCESS</em> button once.</p>
+</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser in the user's system.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the images and data therein.</li>
+<li>If another analysis needs to be run, the <em>REFRESH</em> button can be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<h3 id="banana_1">Banana</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="cowpea_1">Cowpea</h3>
+<p>Cowpea analysis is carried out by using the Cowpea plant leaves. </p>
+<p><img alt="Screenshot" src="img/cowpea_analysis.jpg" /></p>
+<p><strong>Steps for Automatic analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>QRCODE</em>. This will cause many of the input fields to remain disabled.</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains all the required details related to the analysis must be selected.</p>
+</li>
+<li>
+<p>Once the inputs have been set and reviewed, the user must click the <em>PROCESS</em> button once.</p>
+</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser in the user's system.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the images and data therein.</li>
+<li>If another analysis needs to be run, the <em>REFRESH</em> buttoncan be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<h3 id="cucumber_1">Cucumber</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="rice_1">Rice</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="tomato_1">Tomato</h3>
+<p><strong>Steps for Automatic analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>QRCODE</em>. This will cause many of the input fields to remain disabled.</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains all the required details related to the analysis must be selected.</p>
+</li>
+<li>
+<p>Once the inputs have been set and reviewed, the user must click the <em>PROCESS</em> button once.</p>
+</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser in the user's system.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the images and data therein.</li>
+<li>If another analysis needs to be run, the <em>REFRESH</em> buttoncan be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
+<h3 id="wheat_1">Wheat</h3>
+<p>Crop Analysis Instruction</p>
+<h3 id="plate-inhibition_1">Plate Inhibition</h3>
+<p><strong>Steps for Automatic analysis</strong></p>
+<ol>
+<li>Once the application has initialized, the user must set the <em>SOURCE TYPE</em> as <em>QRCODE</em>. This will cause many of the input fields to remain disabled.</li>
+<li>
+<p>The image file containing the overlayed QR code that maintains all the required details related to the analysis must be selected.</p>
+</li>
+<li>
+<p>Once the inputs have been set and reviewed, the user must click the <em>PROCESS</em> button once.</p>
+</li>
+<li>Once the process has initialized, the progress can be tracked using the progress bar.</li>
+<li>Once completed, the <em>DOWNLOAD</em> button will be enabled. Clicking the button will initiate the download of a zip file from the default browser in the user's system.</li>
+<li>Once the zip file has been downloaded, the user can extract the files and analyze the images and data therein.</li>
+<li>If another analysis needs to be run, the <em>REFRESH</em> buttoncan be clicked, which will clear all existing values on-screen and will allow the user to run another analysis.</li>
+</ol>
               
             </div>
           </div><footer>
